@@ -8,3 +8,14 @@ C:\Users\User\Desktop\REPOS\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.csp
 C:\Users\User\Desktop\REPOS\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\REPOS\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.exe
 C:\Users\User\Desktop\REPOS\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.pdb
+C:\HASEEB1\second semester\DB\Final Project\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.csproj.AssemblyReference.cache
+C:\HASEEB1\second semester\DB\Final Project\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.Form1.resources
+C:\HASEEB1\second semester\DB\Final Project\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.Properties.Resources.resources
+C:\HASEEB1\second semester\DB\Final Project\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.Resource1.resources
+C:\HASEEB1\second semester\DB\Final Project\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.csproj.GenerateResource.cache
+C:\HASEEB1\second semester\DB\Final Project\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.csproj.CoreCompileInputs.cache
+C:\HASEEB1\second semester\DB\Final Project\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.exe
+C:\HASEEB1\second semester\DB\Final Project\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.pdb
+C:\HASEEB1\second semester\DB\Final Project\Games\AirStrike1\AirStrike1\bin\Debug\AirStrike1.exe.config
+C:\HASEEB1\second semester\DB\Final Project\Games\AirStrike1\AirStrike1\bin\Debug\AirStrike1.exe
+C:\HASEEB1\second semester\DB\Final Project\Games\AirStrike1\AirStrike1\bin\Debug\AirStrike1.pdb
