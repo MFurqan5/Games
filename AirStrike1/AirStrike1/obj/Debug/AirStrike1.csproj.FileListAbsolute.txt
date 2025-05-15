@@ -1,0 +1,10 @@
+C:\Users\User\Desktop\REPOS\Games\AirStrike1\AirStrike1\bin\Debug\AirStrike1.exe.config
+C:\Users\User\Desktop\REPOS\Games\AirStrike1\AirStrike1\bin\Debug\AirStrike1.exe
+C:\Users\User\Desktop\REPOS\Games\AirStrike1\AirStrike1\bin\Debug\AirStrike1.pdb
+C:\Users\User\Desktop\REPOS\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\REPOS\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.Form1.resources
+C:\Users\User\Desktop\REPOS\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.Properties.Resources.resources
+C:\Users\User\Desktop\REPOS\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.csproj.GenerateResource.cache
+C:\Users\User\Desktop\REPOS\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\REPOS\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.exe
+C:\Users\User\Desktop\REPOS\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.pdb
