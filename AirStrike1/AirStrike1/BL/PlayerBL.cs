@@ -33,7 +33,7 @@ namespace AirStrike1.BL
             switch (key)
             {
                 case Keys.Up:
-                    newLocation.Y = Math.Max(0, (newLocation.Y - moveDistance));
+                    newLocation.Y = Math.Max(-50, (newLocation.Y - moveDistance));
                     direction = Direction.Up;
                     break;
                 case Keys.Down:
@@ -51,8 +51,8 @@ namespace AirStrike1.BL
             }
 
             // Final boundary check
-            newLocation.X = Clamp(newLocation.X, 0, MaxX - objectWidth);
-            newLocation.Y = Clamp(newLocation.Y, 0, MaxY - objectHeight);
+            newLocation.X = Clamp(newLocation.X, -50, MaxX - objectWidth);
+            newLocation.Y = Clamp(newLocation.Y, -20, MaxY - objectHeight);
 
             Object.Location = newLocation;
         }

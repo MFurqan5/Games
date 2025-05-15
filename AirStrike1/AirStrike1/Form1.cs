@@ -1,24 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using AirStrike1.BL;
+using Helicopter;
 
 namespace AirStrike1
 {
     public partial class Form1 : Form
     {
+        // Player and movement related
         private PlayerBL player;
         private HashSet<Keys> pressedKeys = new HashSet<Keys>();
         private List<BulletBL> activeBullets = new List<BulletBL>();
-        private Timer gameTimer;
         private int bulletCooldown = 0;
         private const int FIRE_RATE = 5;
+
+        // Enemy related
+        private List<Enemy> enemies = new List<Enemy>();
+        private Timer spawnTimer = new Timer();
+        private Random random = new Random();
+        private int spawnCounter = 0;
+
+        // Game assets paths
+        private string enemyImagePath = @"C:\Users\User\Desktop\REPOS\Games\AirStrike1\AirStrike1\Resources\enemyPlane.gif";
+        private string helicopterImagePath = @"C:\Users\User\Desktop\REPOS\Games\AirStrike1\AirStrike1\Resources\flying_helicopter.gif";
+        private string bulletImagePath = @"C:\Users\User\Desktop\REPOS\Games\AirStrike1\AirStrike1\Resources\bullet.png";
+
+        // Game timer
+        private Timer gameTimer;
+
         public Form1()
         {
             InitializeComponent();
@@ -27,70 +38,142 @@ namespace AirStrike1
 
         private void InitializeGame()
         {
-            // Setup form
+            try
+            {
+                // Setup form
+                this.DoubleBuffered = true;
+                this.ClientSize = new Size(1000, 600);
+                this.KeyPreview = true;
 
-            this.DoubleBuffered = true;
-            this.ClientSize = new Size(1000, 600);
-            this.KeyPreview = true;
-            //var enemies = new[] { EnemyBL.EnemyType.Type1, EnemyBL.EnemyType.Type2, EnemyBL.EnemyType.Type3 };
-            //var randomType = enemies[new Random().Next(3)];
+                // Create player
+                if (!System.IO.File.Exists(helicopterImagePath))
+                    throw new Exception("Helicopter image not found");
 
-            //var newEnemy = new EnemyBL(
-            //    type: randomType,
-            //    startX: 300,
-            //    startY: 425,
-            //    player: player
-            //);
+                player = new PlayerBL(
+                    
+                    height: 200,
+                    width: 200,
+                    x: 100,
+                    y: this.ClientSize.Height / 2 - 30
+                );
 
-            //this.Controls.Add(newEnemy.GetPictureBox());
+                this.Controls.Add(player.GetPictureBox());
+                player.GetPictureBox().BringToFront();
 
-            // Create player
-            Image helicopterImage = Image.FromFile("C:\\Users\\User\\source\\repos\\Airstrike\\Airstrike\\Assets\\flying_helicopter.gif");
+                // Setup timers
+                gameTimer = new Timer();
+                gameTimer.Interval = 16; // ~60 FPS
+                gameTimer.Tick += GameUpdate;
+                gameTimer.Start();
 
-            player = new PlayerBL(
-               
-                height: 200,
-                width: 200,
-                x: 100,
-                y: this.ClientSize.Height / 2 - 30
-            );
+                spawnTimer.Interval = 1000; // Spawn enemies every second
+                spawnTimer.Tick += SpawnTimer_Tick;
+                spawnTimer.Start();
 
-            this.Controls.Add(player.GetPictureBox());
-            player.GetPictureBox().BringToFront();
-            // Setup timers
-            gameTimer = new Timer();
-            gameTimer.Interval = 16; // ~60 FPS
-            gameTimer.Tick += GameUpdate;
-            gameTimer.Start();
-
-            // Event handlers
-            this.KeyDown += OnKeyDown;
-            this.KeyUp += OnKeyUp;
+                // Event handlers
+                this.KeyDown += OnKeyDown;
+                this.KeyUp += OnKeyUp;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Game initialization failed: {ex.Message}");
+                this.Close();
+            }
         }
 
         private void GameUpdate(object sender, EventArgs e)
         {
-            // Player movement
-            foreach (Keys key in pressedKeys)
+            try
             {
-                player.Move(key);
-            }
-
-            // Bullet cooldown
-            if (bulletCooldown > 0) bulletCooldown--;
-
-            // Update bullets
-            for (int i = activeBullets.Count - 1; i >= 0; i--)
-            {
-                activeBullets[i].Move();
-
-                // Remove off-screen bullets
-                if (activeBullets[i].GetPictureBox().Left > this.ClientSize.Width ||
-                    !activeBullets[i].IsAlive)
+                // Player movement
+                foreach (Keys key in pressedKeys)
                 {
-                    this.Controls.Remove(activeBullets[i].GetPictureBox());
-                    activeBullets.RemoveAt(i);
+                    player.Move(key);
                 }
+
+                // Bullet cooldown
+                if (bulletCooldown > 0) bulletCooldown--;
+
+                // Update bullets
+                for (int i = activeBullets.Count - 1; i >= 0; i--)
+                {
+                    activeBullets[i].Move();
+
+                    // Check for bullet-enemy collisions
+                    foreach (var enemy in enemies)
+                    {
+                        if (activeBullets[i].GetPictureBox().Bounds.IntersectsWith(enemy.GetPictureBox().Bounds))
+                        {
+                            enemy.setIsAlive(false);
+                            activeBullets[i].setIsAlive((false));
+                            break;
+                        }
+                    }
+
+                    // Remove off-screen bullets or bullets that hit enemies
+                    if (activeBullets[i].GetPictureBox().Left > this.ClientSize.Width ||
+                        !activeBullets[i].IsAlive)
+                    {
+                        this.Controls.Remove(activeBullets[i].GetPictureBox());
+                        activeBullets.RemoveAt(i);
+                    }
+                }
+
+                // Move all enemies and check for collisions with player
+                for (int i = enemies.Count - 1; i >= 0; i--)
+                {
+                    enemies[i].Move(Keys.None);
+
+                    // Check for player-enemy collision
+                    if (player.GetPictureBox().Bounds.IntersectsWith(enemies[i].GetPictureBox().Bounds))
+                    {
+                        // Handle player hit (you might want to add health or game over logic here)
+                        enemies[i].setIsAlive(false);
+                    }
+
+                    if (!enemies[i].IsAlive)
+                    {
+                        this.Controls.Remove(enemies[i].GetPictureBox());
+                        enemies.RemoveAt(i);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                gameTimer.Stop();
+                MessageBox.Show($"Game error: {ex.Message}");
+            }
+        }
+
+        private void SpawnTimer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!System.IO.File.Exists(enemyImagePath))
+                    throw new Exception("Enemy image not found");
+
+                Image enemyImage = Image.FromFile(enemyImagePath);
+
+                // Safe random Y position calculation
+                int minY = 50;
+                int maxY = Math.Max(minY + 1, this.ClientSize.Height - 100);
+                int randomY = random.Next(minY, maxY);
+
+                Enemy newEnemy = new Enemy(
+                    enemyImage,
+                    height: 54,
+                    width: 159,
+                    x: this.ClientSize.Width,
+                    y: randomY,
+                    form: this
+                );
+
+                this.Controls.Add(newEnemy.GetPictureBox());
+                enemies.Add(newEnemy);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Enemy spawn failed: {ex.Message}");
             }
         }
 
@@ -122,16 +205,6 @@ namespace AirStrike1
                    keyData == Keys.Up ||
                    keyData == Keys.Down ||
                    base.IsInputKey(keyData);
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using AirStrike1.BL;
 
 namespace Helicopter
 {
@@ -18,25 +19,40 @@ namespace Helicopter
             helicopterBox = helicopter;
             bulletBox = bullet;
 
-            if (PictureBox == null)
+            if (GetPictureBox() == null)
                 throw new Exception("Enemy picture box not initialized");
 
-            PictureBox.BackColor = Color.Transparent;
-            gameForm.Controls.Add(PictureBox);
+            GetPictureBox().BackColor = Color.Transparent;
+            gameForm.Controls.Add(GetPictureBox());
         }
+        public Enemy(Image image, int height, int width, int x, int y, Form form)
+        {
+           
 
-        public override void Move(Keys key)
+            // Create the enemy PictureBox
+            Object = new PictureBox()
+            {
+                Image = image,
+                Size = new Size(width, height),
+                Location = new Point(x, y),
+                SizeMode = PictureBoxSizeMode.StretchImage,
+                BackColor = Color.Transparent
+            };
+            form.Controls.Add(GetPictureBox());
+        }
+        public void Move(Keys key)
         {
             try
             {
-                if (PictureBox == null) return;
+                var enemyBox = GetPictureBox();
+                if (enemyBox == null) return;
 
                 // Move enemy left
-                PictureBox.Left -= moveSpeed;
+                enemyBox.Left -= moveSpeed;
 
                 // Check bullet collision
                 if (bulletBox != null && bulletBox.Visible &&
-                    PictureBox.Bounds.IntersectsWith(bulletBox.Bounds))
+                    enemyBox.Bounds.IntersectsWith(bulletBox.Bounds))
                 {
                     bulletBox.Visible = false;
                     CleanUp();
@@ -45,7 +61,7 @@ namespace Helicopter
 
                 // Check helicopter collision
                 if (helicopterBox != null && !helicopterBox.IsDisposed &&
-                    PictureBox.Bounds.IntersectsWith(helicopterBox.Bounds))
+                    enemyBox.Bounds.IntersectsWith(helicopterBox.Bounds))
                 {
                     gameForm.Invoke((MethodInvoker)delegate {
                         gameForm.Controls.Remove(helicopterBox);
@@ -58,7 +74,7 @@ namespace Helicopter
                 }
 
                 // Remove when off-screen
-                if (PictureBox.Right < 0)
+                if (enemyBox.Right < 0)
                 {
                     CleanUp();
                 }
@@ -74,12 +90,13 @@ namespace Helicopter
         {
             try
             {
-                if (PictureBox != null && !PictureBox.IsDisposed)
+                var enemyBox = GetPictureBox();
+                if (enemyBox != null && !enemyBox.IsDisposed)
                 {
-                    gameForm.Controls.Remove(PictureBox);
-                    PictureBox.Dispose();
+                    //gameForm.Controls.Remove(enemyBox);
+                    enemyBox.Dispose();
                 }
-                IsAlive = false;
+                setIsAlive(false);
             }
             catch { /* Ensure cleanup doesn't throw */ }
         }
