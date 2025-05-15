@@ -161,5 +161,10 @@ namespace AirStrike1
                 MessageBox.Show($"Input error: {ex.Message}");
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
