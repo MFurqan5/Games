@@ -12,24 +12,20 @@ namespace AirStrike1
         IScoreManager scoreManager = new ScoreManager();
         Label scoreLabel = new Label();
 
-        // Player and movement related
         private PlayerBL player;
         private HashSet<Keys> pressedKeys = new HashSet<Keys>();
         private List<BulletBL> activeBullets = new List<BulletBL>();
         private int bulletCooldown = 0;
         private const int FIRE_RATE = 5;
 
-        // Enemy related
-        private List<Enemy> enemies = new List<Enemy>();
+        private List<GameObjectBL> enemies = new List<GameObjectBL>();
         private Timer spawnTimer = new Timer();
         private Random random = new Random();
 
-        // Game assets paths
-        private string enemyImagePath = @"D:\visual studio\gameimage\enemyPlane.gif";
-        private string helicopterImagePath = @"D:\visual studio\gameimage\flying_helicopter.gif";
-        private string bulletImagePath = @"D:\visual studio\gameimage\bullet.png";
+        private string enemyImagePath = @"D:\\visual studio\\gameimage\\enemyPlane.gif";
+        private string helicopterImagePath = @"D:\\visual studio\\gameimage\\flying_helicopter.gif";
+        private string bulletImagePath = @"D:\\visual studio\\gameimage\\bullet.png";
 
-        // Game timer
         private Timer gameTimer;
 
         public Form1()
@@ -49,36 +45,26 @@ namespace AirStrike1
         {
             try
             {
-                // Setup form
                 this.DoubleBuffered = true;
                 this.ClientSize = new Size(1000, 600);
                 this.KeyPreview = true;
 
-                // Create player
                 if (!System.IO.File.Exists(helicopterImagePath))
                     throw new Exception("Helicopter image not found");
 
-                player = new PlayerBL(
-                    height: 200,
-                    width: 200,
-                    x: 100,
-                    y: this.ClientSize.Height / 2 - 30
-                );
-
+                player = new PlayerBL(200, 200, 100, this.ClientSize.Height / 2 - 30);
                 this.Controls.Add(player.GetPictureBox());
                 player.GetPictureBox().BringToFront();
 
-                // Setup timers
                 gameTimer = new Timer();
-                gameTimer.Interval = 16; // ~60 FPS
+                gameTimer.Interval = 16;
                 gameTimer.Tick += GameUpdate;
                 gameTimer.Start();
 
-                spawnTimer.Interval = 1000; // Spawn enemies every second
+                spawnTimer.Interval = 1000;
                 spawnTimer.Tick += SpawnTimer_Tick;
                 spawnTimer.Start();
 
-                // Event handlers
                 this.KeyDown += OnKeyDown;
                 this.KeyUp += OnKeyUp;
             }
@@ -93,33 +79,27 @@ namespace AirStrike1
         {
             try
             {
-                // Player movement
                 foreach (Keys key in pressedKeys)
                 {
                     player.Move(key);
                 }
 
-                // Bullet cooldown
                 if (bulletCooldown > 0) bulletCooldown--;
 
-                // Update bullets
                 for (int i = activeBullets.Count - 1; i >= 0; i--)
                 {
                     activeBullets[i].Move();
 
-                    // Check for bullet-enemy collisions
-                    foreach (var enemy in enemies)
+                    foreach (var enemyObj in enemies)
                     {
-                        if (activeBullets[i].GetPictureBox().Bounds.IntersectsWith(enemy.GetPictureBox().Bounds))
+                        if (enemyObj is Enemy enemy &&
+                            activeBullets[i].GetPictureBox().Bounds.IntersectsWith(enemy.GetPictureBox().Bounds))
                         {
                             enemy.setIsAlive(false);
                             activeBullets[i].setIsAlive(false);
-
-                            // Increase score and update label
                             scoreManager.IncreaseScore(1);
                             scoreLabel.Text = "Score: " + scoreManager.GetScore();
 
-                            // Win condition
                             if (scoreManager.GetScore() >= 20)
                             {
                                 gameTimer.Stop();
@@ -127,13 +107,11 @@ namespace AirStrike1
                                 MessageBox.Show("Congratulations! You won the game!");
                                 Application.Exit();
                             }
-
-                            break;  // Bullet hit one enemy, stop checking others
+                            break;
                         }
                     }
 
-                    // Remove off-screen bullets or bullets that hit enemies
-                    if (activeBullets.Count > i) // Check to avoid index issues after removal
+                    if (activeBullets.Count > i)
                     {
                         if (activeBullets[i].GetPictureBox().Left > this.ClientSize.Width ||
                             !activeBullets[i].IsAlive)
@@ -144,39 +122,29 @@ namespace AirStrike1
                     }
                 }
 
-                // Move all enemies and check for collisions with player and helicopter
                 for (int i = enemies.Count - 1; i >= 0; i--)
                 {
-                    enemies[i].Move(Keys.None);
-
-                    // Check for player-enemy collision (bullet collision handled above)
-                    if (player.GetPictureBox().Bounds.IntersectsWith(enemies[i].GetPictureBox().Bounds))
+                    if (enemies[i] is Enemy enemy)
                     {
-                        enemies[i].setIsAlive(false);
-                    }
+                        enemy.Move(Keys.None);
 
-                    // *** Helicopter vs Enemy collision check ***
-                    if (player.GetPictureBox().Right >= enemies[i].GetPictureBox().Left &&
-                        player.GetPictureBox().Bounds.IntersectsWith(enemies[i].GetPictureBox().Bounds))
-                    {
-                        // Remove enemy and helicopter PictureBoxes
-                        this.Controls.Remove(enemies[i].GetPictureBox());
-                        enemies[i].setIsAlive(false);
+                        if (player.GetPictureBox().Bounds.IntersectsWith(enemy.GetPictureBox().Bounds))
+                        {
+                            this.Controls.Remove(enemy.GetPictureBox());
+                            enemy.setIsAlive(false);
+                            this.Controls.Remove(player.GetPictureBox());
 
-                        this.Controls.Remove(player.GetPictureBox());
+                            gameTimer.Stop();
+                            spawnTimer.Stop();
+                            MessageBox.Show("Game Over! You collided with the enemy.");
+                            Application.Exit();
+                        }
 
-                        // Stop game timers and show Game Over
-                        gameTimer.Stop();
-                        spawnTimer.Stop();
-
-                        MessageBox.Show("Game Over! You collided with the enemy.");
-                        Application.Exit();
-                    }
-
-                    if (!enemies[i].IsAlive)
-                    {
-                        this.Controls.Remove(enemies[i].GetPictureBox());
-                        enemies.RemoveAt(i);
+                        if (!enemy.IsAlive)
+                        {
+                            this.Controls.Remove(enemy.GetPictureBox());
+                            enemies.RemoveAt(i);
+                        }
                     }
                 }
             }
@@ -195,13 +163,11 @@ namespace AirStrike1
                     throw new Exception("Enemy image not found");
 
                 Image enemyImage = Image.FromFile(enemyImagePath);
-
-                // Safe random Y position calculation
                 int minY = 50;
                 int maxY = Math.Max(minY + 1, this.ClientSize.Height - 100);
                 int randomY = random.Next(minY, maxY);
 
-                Enemy newEnemy = new Enemy(
+                GameObjectBL newEnemy = new Enemy(
                     enemyImage,
                     height: 54,
                     width: 159,
@@ -223,7 +189,6 @@ namespace AirStrike1
         {
             pressedKeys.Add(e.KeyCode);
 
-            // Firing with spacebar
             if (e.KeyCode == Keys.Space && bulletCooldown <= 0)
             {
                 BulletBL newBullet = player.Fire();
@@ -238,10 +203,9 @@ namespace AirStrike1
         {
             pressedKeys.Remove(e.KeyCode);
         }
-
+       
         protected override bool IsInputKey(Keys keyData)
         {
-            // Ensure arrow keys are processed
             return keyData == Keys.Left ||
                    keyData == Keys.Right ||
                    keyData == Keys.Up ||
@@ -249,5 +213,4 @@ namespace AirStrike1
                    base.IsInputKey(keyData);
         }
     }
-}
-     
+} 
