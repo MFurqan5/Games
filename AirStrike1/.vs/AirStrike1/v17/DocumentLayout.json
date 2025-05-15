@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\airstrike1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|c:\\users\\user\\desktop\\repos\\games\\airstrike1\\airstrike1\\bl\\playerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\bl\\playerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|c:\\users\\user\\desktop\\repos\\games\\airstrike1\\airstrike1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|c:\\users\\user\\desktop\\repos\\games\\airstrike1\\airstrike1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|c:\\users\\user\\desktop\\repos\\games\\airstrike1\\airstrike1\\bl\\gameobjectbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\airstrike1\\bl\\gameobjectbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\bl\\gameobjectbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|c:\\users\\user\\desktop\\repos\\games\\airstrike1\\airstrike1\\form1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\form1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|c:\\users\\user\\desktop\\repos\\games\\airstrike1\\airstrike1\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|c:\\users\\user\\desktop\\repos\\games\\airstrike1\\airstrike1\\bl\\bulletbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\bl\\bulletbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\airstrike1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|c:\\users\\user\\desktop\\repos\\games\\airstrike1\\airstrike1\\properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,31 +47,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.resx",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Form1.resx",
-              "RelativeDocumentMoniker": "AirStrike1\\Form1.resx",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Form1.resx",
-              "RelativeToolTip": "AirStrike1\\Form1.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-05-15T09:37:09.521Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameObjectBL.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\BL\\GameObjectBL.cs",
-              "RelativeDocumentMoniker": "AirStrike1\\BL\\GameObjectBL.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\BL\\GameObjectBL.cs",
-              "RelativeToolTip": "AirStrike1\\BL\\GameObjectBL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T09:35:48.009Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -71,20 +58,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Form1.cs",
-              "RelativeDocumentMoniker": "AirStrike1\\Form1.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Form1.cs",
-              "RelativeToolTip": "AirStrike1\\Form1.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAADgvxUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T09:22:53.215Z",
+              "DocumentIndex": 3,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "AirStrike1\\Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Properties\\Resources.resx",
+              "RelativeToolTip": "AirStrike1\\Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-05-15T10:52:42.126Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PlayerBL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\BL\\PlayerBL.cs",
+              "RelativeDocumentMoniker": "AirStrike1\\BL\\PlayerBL.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\BL\\PlayerBL.cs",
+              "RelativeToolTip": "AirStrike1\\BL\\PlayerBL.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAawCkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T10:10:43.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameObjectBL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\BL\\GameObjectBL.cs",
+              "RelativeDocumentMoniker": "AirStrike1\\BL\\GameObjectBL.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\BL\\GameObjectBL.cs",
+              "RelativeToolTip": "AirStrike1\\BL\\GameObjectBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T09:35:48.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Form1.cs",
               "RelativeDocumentMoniker": "AirStrike1\\Form1.cs",
@@ -93,6 +105,45 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T09:22:49.419Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BulletBL.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\BL\\BulletBL.cs",
+              "RelativeDocumentMoniker": "AirStrike1\\BL\\BulletBL.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\BL\\BulletBL.cs",
+              "RelativeToolTip": "AirStrike1\\BL\\BulletBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T10:42:34.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Form1.cs",
+              "RelativeDocumentMoniker": "AirStrike1\\Form1.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Form1.cs",
+              "RelativeToolTip": "AirStrike1\\Form1.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAArwFgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T09:22:53.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Resources.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Properties\\Resources.Designer.cs",
+              "RelativeDocumentMoniker": "AirStrike1\\Properties\\Resources.Designer.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Properties\\Resources.Designer.cs",
+              "RelativeToolTip": "AirStrike1\\Properties\\Resources.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T10:52:26.893Z",
+              "EditorCaption": ""
             }
           ]
         }
