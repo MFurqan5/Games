@@ -12,7 +12,7 @@ namespace AirStrike1.BL
         public PlayerBL(int height = 200, int width = 200, int x = 200, int y = 100)
            : base(height, width, x, y)
         {
-            Object.Image = Image.FromFile("C:\\Users\\User\\source\\repos\\Airstrike\\Airstrike\\Assets\\flying_helicopter.gif");
+            Object.Image = Image.FromFile("D:\\visual studio\\gameimage\\flying_helicopter.gif");
             health = 100;
         }
 

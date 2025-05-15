@@ -1,42 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\",
+  "WorkspaceRootPath": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|c:\\users\\user\\desktop\\repos\\games\\airstrike1\\airstrike1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|d:\\visual studio\\universities\\uet\\semesters\\second_semester\\object_oriented_language(oop)\\lab\\gamerepo\\games\\airstrike1\\airstrike1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\airstrike1\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\airstrike1\\bl\\playerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\bl\\playerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\airstrike1\\bl\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\airstrike1\\bl\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\bl\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\airstrike1\\bl\\gameobjectbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\bl\\gameobjectbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|d:\\visual studio\\universities\\uet\\semesters\\second_semester\\object_oriented_language(oop)\\lab\\gamerepo\\games\\airstrike1\\airstrike1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\airstrike1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|d:\\visual studio\\universities\\uet\\semesters\\second_semester\\object_oriented_language(oop)\\lab\\gamerepo\\games\\airstrike1\\airstrike1\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\airstrike1\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\airstrike1\\bl\\playerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\bl\\playerbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\airstrike1\\bl\\bulletbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|d:\\visual studio\\universities\\uet\\semesters\\second_semester\\object_oriented_language(oop)\\lab\\gamerepo\\games\\airstrike1\\airstrike1\\bl\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\bl\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|d:\\visual studio\\universities\\uet\\semesters\\second_semester\\object_oriented_language(oop)\\lab\\gamerepo\\games\\airstrike1\\airstrike1\\iscoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\iscoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\airstrike1\\bl\\bulletbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\bl\\bulletbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\airstrike1\\properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\properties\\resources.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\airstrike1\\bl\\gameobjectbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\bl\\gameobjectbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\airstrike1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F953629E-2B79-4AF3-88D0-9F2220E65788}|AirStrike1\\AirStrike1.csproj|solutionrelative:airstrike1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,30 +53,66 @@
           "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "AirStrike1\\Form1.Designer.cs",
+              "ToolTip": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\Form1.Designer.cs",
+              "RelativeToolTip": "AirStrike1\\Form1.Designer.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAAC4AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T16:45:14.826Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ScoreManager.cs",
+              "DocumentMoniker": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\BL\\ScoreManager.cs",
+              "RelativeDocumentMoniker": "AirStrike1\\BL\\ScoreManager.cs",
+              "ToolTip": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\BL\\ScoreManager.cs",
+              "RelativeToolTip": "AirStrike1\\BL\\ScoreManager.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T16:30:54.118Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IScoreManager.cs",
+              "DocumentMoniker": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\IScoreManager.cs",
+              "RelativeDocumentMoniker": "AirStrike1\\IScoreManager.cs",
+              "ToolTip": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\IScoreManager.cs",
+              "RelativeToolTip": "AirStrike1\\IScoreManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T16:30:31.441Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\Program.cs",
+              "RelativeDocumentMoniker": "AirStrike1\\Program.cs",
+              "ToolTip": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\Program.cs",
+              "RelativeToolTip": "AirStrike1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T15:37:43.384Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Form1.cs",
+              "DocumentMoniker": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\Form1.cs",
               "RelativeDocumentMoniker": "AirStrike1\\Form1.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Form1.cs",
+              "ToolTip": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\Form1.cs",
               "RelativeToolTip": "AirStrike1\\Form1.cs",
-              "ViewState": "AgIAAJgAAAAAAAAAAAAawLAAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAIwPwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T09:22:53.215Z",
               "EditorCaption": ""
@@ -80,100 +120,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "AirStrike1\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Form1.Designer.cs",
-              "RelativeToolTip": "AirStrike1\\Form1.Designer.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAqwC4AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T13:42:41.45Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Enemy.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\BL\\Enemy.cs",
+              "DocumentMoniker": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\BL\\Enemy.cs",
               "RelativeDocumentMoniker": "AirStrike1\\BL\\Enemy.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\BL\\Enemy.cs",
+              "ToolTip": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\BL\\Enemy.cs",
               "RelativeToolTip": "AirStrike1\\BL\\Enemy.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAUwF8AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAFYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T13:41:39.281Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "PlayerBL.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\BL\\PlayerBL.cs",
+              "DocumentMoniker": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\BL\\PlayerBL.cs",
               "RelativeDocumentMoniker": "AirStrike1\\BL\\PlayerBL.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\BL\\PlayerBL.cs",
+              "ToolTip": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\BL\\PlayerBL.cs",
               "RelativeToolTip": "AirStrike1\\BL\\PlayerBL.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADYAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAUwE4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T10:10:43.931Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "GameObjectBL.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\BL\\GameObjectBL.cs",
+              "DocumentMoniker": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\BL\\GameObjectBL.cs",
               "RelativeDocumentMoniker": "AirStrike1\\BL\\GameObjectBL.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\BL\\GameObjectBL.cs",
+              "ToolTip": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\BL\\GameObjectBL.cs",
               "RelativeToolTip": "AirStrike1\\BL\\GameObjectBL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAuwDcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T09:35:48.009Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Resources.resx",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Properties\\Resources.resx",
-              "RelativeDocumentMoniker": "AirStrike1\\Properties\\Resources.resx",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Properties\\Resources.resx",
-              "RelativeToolTip": "AirStrike1\\Properties\\Resources.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-05-15T10:52:42.126Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Form1.cs",
+              "DocumentMoniker": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\Form1.cs",
               "RelativeDocumentMoniker": "AirStrike1\\Form1.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Form1.cs [Design]",
+              "ToolTip": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\Form1.cs [Design]",
               "RelativeToolTip": "AirStrike1\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T09:22:49.419Z"
+              "WhenOpened": "2025-05-15T09:22:49.419Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "BulletBL.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\BL\\BulletBL.cs",
+              "DocumentMoniker": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\BL\\BulletBL.cs",
               "RelativeDocumentMoniker": "AirStrike1\\BL\\BulletBL.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\BL\\BulletBL.cs",
+              "ToolTip": "D:\\visual studio\\Universities\\UET\\Semesters\\Second_Semester\\Object_Oriented_Language(OOP)\\Lab\\GameRepo\\Games\\AirStrike1\\AirStrike1\\BL\\BulletBL.cs",
               "RelativeToolTip": "AirStrike1\\BL\\BulletBL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAYwCIAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T10:42:34.203Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Resources.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Properties\\Resources.Designer.cs",
-              "RelativeDocumentMoniker": "AirStrike1\\Properties\\Resources.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\REPOS\\Games\\AirStrike1\\AirStrike1\\Properties\\Resources.Designer.cs",
-              "RelativeToolTip": "AirStrike1\\Properties\\Resources.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T10:52:26.893Z"
+              "WhenOpened": "2025-05-15T10:42:34.203Z",
+              "EditorCaption": ""
             }
           ]
         }

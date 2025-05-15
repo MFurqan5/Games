@@ -11,7 +11,7 @@ namespace AirStrike1.BL
     internal class BulletBL:GameObjectBL
     {
         public BulletBL(int x, int y, Direction direction)
-           : base(Image.FromFile("C:\\Users\\User\\Desktop\\oop week\\Helicopter\\Helicopter\\Resources\\bullet.png"),
+           : base(Image.FromFile("D:\\visual studio\\gameimage\\bullet.png"),
                   height: 10,
                   width: 20,
                   x: x,

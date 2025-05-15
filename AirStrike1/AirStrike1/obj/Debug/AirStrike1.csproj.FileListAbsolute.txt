@@ -19,3 +19,13 @@ C:\HASEEB1\second semester\DB\Final Project\Games\AirStrike1\AirStrike1\obj\Debu
 C:\HASEEB1\second semester\DB\Final Project\Games\AirStrike1\AirStrike1\bin\Debug\AirStrike1.exe.config
 C:\HASEEB1\second semester\DB\Final Project\Games\AirStrike1\AirStrike1\bin\Debug\AirStrike1.exe
 C:\HASEEB1\second semester\DB\Final Project\Games\AirStrike1\AirStrike1\bin\Debug\AirStrike1.pdb
+D:\visual studio\Universities\UET\Semesters\Second_Semester\Object_Oriented_Language(OOP)\Lab\GameRepo\Games\AirStrike1\AirStrike1\bin\Debug\AirStrike1.exe.config
+D:\visual studio\Universities\UET\Semesters\Second_Semester\Object_Oriented_Language(OOP)\Lab\GameRepo\Games\AirStrike1\AirStrike1\bin\Debug\AirStrike1.exe
+D:\visual studio\Universities\UET\Semesters\Second_Semester\Object_Oriented_Language(OOP)\Lab\GameRepo\Games\AirStrike1\AirStrike1\bin\Debug\AirStrike1.pdb
+D:\visual studio\Universities\UET\Semesters\Second_Semester\Object_Oriented_Language(OOP)\Lab\GameRepo\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.csproj.AssemblyReference.cache
+D:\visual studio\Universities\UET\Semesters\Second_Semester\Object_Oriented_Language(OOP)\Lab\GameRepo\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.Form1.resources
+D:\visual studio\Universities\UET\Semesters\Second_Semester\Object_Oriented_Language(OOP)\Lab\GameRepo\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.Properties.Resources.resources
+D:\visual studio\Universities\UET\Semesters\Second_Semester\Object_Oriented_Language(OOP)\Lab\GameRepo\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.csproj.GenerateResource.cache
+D:\visual studio\Universities\UET\Semesters\Second_Semester\Object_Oriented_Language(OOP)\Lab\GameRepo\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.csproj.CoreCompileInputs.cache
+D:\visual studio\Universities\UET\Semesters\Second_Semester\Object_Oriented_Language(OOP)\Lab\GameRepo\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.exe
+D:\visual studio\Universities\UET\Semesters\Second_Semester\Object_Oriented_Language(OOP)\Lab\GameRepo\Games\AirStrike1\AirStrike1\obj\Debug\AirStrike1.pdb

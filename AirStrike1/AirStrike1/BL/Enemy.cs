@@ -27,8 +27,6 @@ namespace Helicopter
         }
         public Enemy(Image image, int height, int width, int x, int y, Form form)
         {
-           
-
             // Create the enemy PictureBox
             Object = new PictureBox()
             {
@@ -59,29 +57,14 @@ namespace Helicopter
                     return;
                 }
 
-                // Check helicopter collision
-                if (helicopterBox != null && !helicopterBox.IsDisposed &&
-                    enemyBox.Bounds.IntersectsWith(helicopterBox.Bounds))
-                {
-                    gameForm.Invoke((MethodInvoker)delegate {
-                        gameForm.Controls.Remove(helicopterBox);
-                        helicopterBox.Dispose();
-                        CleanUp();
-                        MessageBox.Show("Game Over!");
-                        Application.Exit();
-                    });
-                    return;
-                }
-
                 // Remove when off-screen
                 if (enemyBox.Right < 0)
                 {
                     CleanUp();
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                // Silent fail for enemy movement to prevent game crash
                 CleanUp();
             }
         }
@@ -93,7 +76,6 @@ namespace Helicopter
                 var enemyBox = GetPictureBox();
                 if (enemyBox != null && !enemyBox.IsDisposed)
                 {
-                    //gameForm.Controls.Remove(enemyBox);
                     enemyBox.Dispose();
                 }
                 setIsAlive(false);
