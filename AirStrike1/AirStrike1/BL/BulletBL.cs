@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AirStrike1.BL
 {
-    internal class BulletBL:GameObjectBL
+    internal class BulletBL : GameObjectBL
     {
         public BulletBL(int x, int y, Direction direction)
            : base(Image.FromFile("D:\\visual studio\\gameimage\\bullet.png"),
@@ -48,4 +44,3 @@ namespace AirStrike1.BL
         }
     }
 }
-

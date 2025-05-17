@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using AirStrike1.BL;
-using Helicopter;
+//using Helicopter;
 
 namespace AirStrike1
 {
@@ -11,6 +11,9 @@ namespace AirStrike1
     {
         IScoreManager scoreManager = new ScoreManager();
         Label scoreLabel = new Label();
+        Label healthLabel = new Label();
+        // Add boss health label
+        Label bossHealthLabel = new Label();
 
         private PlayerBL player;
         private HashSet<Keys> pressedKeys = new HashSet<Keys>();
@@ -22,9 +25,13 @@ namespace AirStrike1
         private Timer spawnTimer = new Timer();
         private Random random = new Random();
 
-        private string enemyImagePath = @"D:\\visual studio\\gameimage\\enemyPlane.gif";
-        private string helicopterImagePath = @"D:\\visual studio\\gameimage\\flying_helicopter.gif";
-        private string bulletImagePath = @"D:\\visual studio\\gameimage\\bullet.png";
+        private BossEnemy bossEnemy;
+        private bool bossSpawned = false;
+
+        private string enemyImagePath = @"D:\visual studio\gameimage\enemyPlane.gif";
+        private string bossImagePath = @"D:\visual studio\gameimage\red_flipped_helicopter.gif";
+        private string helicopterImagePath = @"D:\visual studio\gameimage\flying_helicopter.gif";
+        private string bulletImagePath = @"D:\visual studio\gameimage\bullet.png";
 
         private Timer gameTimer;
 
@@ -32,6 +39,11 @@ namespace AirStrike1
         {
             InitializeComponent();
             InitializeGame();
+            InitializeLabels();
+        }
+
+        private void InitializeLabels()
+        {
             scoreLabel.Text = "Score: 0";
             scoreLabel.Font = new Font("Arial", 14, FontStyle.Bold);
             scoreLabel.ForeColor = Color.White;
@@ -39,6 +51,24 @@ namespace AirStrike1
             scoreLabel.Location = new Point(10, 10);
             scoreLabel.AutoSize = true;
             this.Controls.Add(scoreLabel);
+
+            healthLabel.Text = "Health: 5";
+            healthLabel.Font = new Font("Arial", 14, FontStyle.Bold);
+            healthLabel.ForeColor = Color.White;
+            healthLabel.BackColor = Color.Transparent;
+            healthLabel.Location = new Point(10, 40);
+            healthLabel.AutoSize = true;
+            this.Controls.Add(healthLabel);
+
+            // Add boss health label (initially invisible)
+            bossHealthLabel.Text = "Boss Health: 5";
+            bossHealthLabel.Font = new Font("Arial", 14, FontStyle.Bold);
+            bossHealthLabel.ForeColor = Color.Red;
+            bossHealthLabel.BackColor = Color.Transparent;
+            bossHealthLabel.Location = new Point(10, 70);
+            bossHealthLabel.AutoSize = true;
+            bossHealthLabel.Visible = false; // Initially invisible
+            this.Controls.Add(bossHealthLabel);
         }
 
         private void InitializeGame()
@@ -86,72 +116,171 @@ namespace AirStrike1
 
                 if (bulletCooldown > 0) bulletCooldown--;
 
-                for (int i = activeBullets.Count - 1; i >= 0; i--)
+                UpdateRegularEnemies();
+                UpdatePlayerBullets();
+
+                if (scoreManager.GetScore() >= 20 && !bossSpawned)
                 {
-                    activeBullets[i].Move();
-
-                    foreach (var enemyObj in enemies)
-                    {
-                        if (enemyObj is Enemy enemy &&
-                            activeBullets[i].GetPictureBox().Bounds.IntersectsWith(enemy.GetPictureBox().Bounds))
-                        {
-                            enemy.setIsAlive(false);
-                            activeBullets[i].setIsAlive(false);
-                            scoreManager.IncreaseScore(1);
-                            scoreLabel.Text = "Score: " + scoreManager.GetScore();
-
-                            if (scoreManager.GetScore() >= 20)
-                            {
-                                gameTimer.Stop();
-                                spawnTimer.Stop();
-                                MessageBox.Show("Congratulations! You won the game!");
-                                Application.Exit();
-                            }
-                            break;
-                        }
-                    }
-
-                    if (activeBullets.Count > i)
-                    {
-                        if (activeBullets[i].GetPictureBox().Left > this.ClientSize.Width ||
-                            !activeBullets[i].IsAlive)
-                        {
-                            this.Controls.Remove(activeBullets[i].GetPictureBox());
-                            activeBullets.RemoveAt(i);
-                        }
-                    }
+                    SpawnBoss();
                 }
 
-                for (int i = enemies.Count - 1; i >= 0; i--)
+                if (bossSpawned)
                 {
-                    if (enemies[i] is Enemy enemy)
-                    {
-                        enemy.Move(Keys.None);
-
-                        if (player.GetPictureBox().Bounds.IntersectsWith(enemy.GetPictureBox().Bounds))
-                        {
-                            this.Controls.Remove(enemy.GetPictureBox());
-                            enemy.setIsAlive(false);
-                            this.Controls.Remove(player.GetPictureBox());
-
-                            gameTimer.Stop();
-                            spawnTimer.Stop();
-                            MessageBox.Show("Game Over! You collided with the enemy.");
-                            Application.Exit();
-                        }
-
-                        if (!enemy.IsAlive)
-                        {
-                            this.Controls.Remove(enemy.GetPictureBox());
-                            enemies.RemoveAt(i);
-                        }
-                    }
+                    UpdateBoss();
                 }
             }
             catch (Exception ex)
             {
                 gameTimer.Stop();
                 MessageBox.Show($"Game error: {ex.Message}");
+            }
+        }
+
+        private void UpdateRegularEnemies()
+        {
+            // If player is already dead, don't process enemies
+            if (player.Health <= 0) return;
+
+            for (int i = enemies.Count - 1; i >= 0; i--)
+            {
+                if (enemies[i] is Enemy enemy)
+                {
+                    enemy.Move(Keys.None);
+
+                    if (player.GetPictureBox().Bounds.IntersectsWith(enemy.GetPictureBox().Bounds))
+                    {
+                        // Stop all timers immediately
+                        gameTimer.Stop();
+                        spawnTimer.Stop();
+
+                        // Clear all event handlers to prevent multiple calls
+                        gameTimer.Tick -= GameUpdate;
+                        spawnTimer.Tick -= SpawnTimer_Tick;
+
+                        // Set player health to 0
+                        player.TakeDamage(player.Health);
+                        healthLabel.Text = "Health: 0";
+
+                        // Show only one message box and exit
+                        MessageBox.Show("Game Over! Your helicopter was destroyed.");
+                        Application.Exit();
+                        return;
+                    }
+
+                    if (!enemy.IsAlive)
+                    {
+                        this.Controls.Remove(enemy.GetPictureBox());
+                        enemies.RemoveAt(i);
+                    }
+                }
+            }
+        }
+
+        private void UpdatePlayerBullets()
+        {
+            for (int i = activeBullets.Count - 1; i >= 0; i--)
+            {
+                activeBullets[i].Move();
+
+                foreach (var enemyObj in enemies)
+                {
+                    if (enemyObj is Enemy enemy &&
+                        activeBullets[i].GetPictureBox().Bounds.IntersectsWith(enemy.GetPictureBox().Bounds))
+                    {
+                        enemy.setIsAlive(false);
+                        activeBullets[i].setIsAlive(false);
+                        scoreManager.IncreaseScore(1);
+                        scoreLabel.Text = "Score: " + scoreManager.GetScore();
+                        break;
+                    }
+                }
+
+                if (bossSpawned && activeBullets[i].GetPictureBox().Bounds.IntersectsWith(bossEnemy.GetPictureBox().Bounds))
+                {
+                    // Check if bullet hits the left side of the boss
+                    if (activeBullets[i].GetPictureBox().Right >= bossEnemy.GetPictureBox().Left &&
+                        activeBullets[i].GetPictureBox().Left <= bossEnemy.GetPictureBox().Left + 20) // 20 pixels buffer for "left side"
+                    {
+                        // Visual feedback: Flash the boss red when hit
+                        bossEnemy.GetPictureBox().BackColor = Color.Red;
+
+                        // Reset the color after a short delay
+                        Timer resetColorTimer = new Timer();
+                        resetColorTimer.Interval = 100;
+                        resetColorTimer.Tick += (sender, e) => {
+                            bossEnemy.GetPictureBox().BackColor = Color.Transparent;
+                            resetColorTimer.Stop();
+                            resetColorTimer.Dispose();
+                        };
+                        resetColorTimer.Start();
+
+                        bossEnemy.TakeDamage();
+                        activeBullets[i].setIsAlive(false);
+
+                        // Update boss health label
+                        bossHealthLabel.Text = "Boss Health: " + (bossEnemy.IsAlive ?
+                            Math.Max(1, 6 - (6 - bossEnemy.Health)) : 0);  // Convert remaining health to display
+                    }
+
+                    if (!bossEnemy.IsAlive)
+                    {
+                        gameTimer.Stop();
+                        MessageBox.Show("Congratulations! You defeated the boss and won the game!");
+                        Application.Exit();
+                    }
+                }
+
+                if (activeBullets.Count > i)
+                {
+                    if (activeBullets[i].GetPictureBox().Left > this.ClientSize.Width ||
+                        !activeBullets[i].IsAlive)
+                    {
+                        this.Controls.Remove(activeBullets[i].GetPictureBox());
+                        activeBullets.RemoveAt(i);
+                    }
+                }
+            }
+        }
+
+        private void SpawnBoss()
+        {
+            foreach (var enemy in enemies)
+            {
+                this.Controls.Remove(enemy.GetPictureBox());
+            }
+            enemies.Clear();
+            spawnTimer.Stop();
+
+            Image bossImage = Image.FromFile(bossImagePath);
+            bossEnemy = new BossEnemy(
+                bossImage,
+                height: 150,
+                width: 200,
+                x: this.ClientSize.Width - 250,
+                y: this.ClientSize.Height / 2 - 75,
+                form: this,
+                player: player
+            );
+            this.Controls.Add(bossEnemy.GetPictureBox());
+            bossEnemy.GetPictureBox().BringToFront();
+            bossSpawned = true;
+
+            // Show boss health label when boss is spawned
+            bossHealthLabel.Visible = true;
+            bossHealthLabel.Text = "Boss Health: 5";
+        }
+
+        private void UpdateBoss()
+        {
+            bossEnemy.Move();
+            bossEnemy.UpdateBullets();
+            healthLabel.Text = "Health: " + player.Health;
+
+            if (player.Health <= 0)
+            {
+                gameTimer.Stop();
+                MessageBox.Show("Game Over! Your helicopter was destroyed.");
+                Application.Exit();
             }
         }
 
@@ -203,7 +332,7 @@ namespace AirStrike1
         {
             pressedKeys.Remove(e.KeyCode);
         }
-       
+
         protected override bool IsInputKey(Keys keyData)
         {
             return keyData == Keys.Left ||
@@ -213,4 +342,4 @@ namespace AirStrike1
                    base.IsInputKey(keyData);
         }
     }
-} 
+}

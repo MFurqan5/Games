@@ -8,12 +8,12 @@ namespace AirStrike1.BL
     {
         private const int MaxX = 1450;
         private const int MaxY = 1000;
+        public int Health { get; private set; } = 20;
 
         public PlayerBL(int height = 200, int width = 200, int x = 200, int y = 100)
            : base(height, width, x, y)
         {
             Object.Image = Image.FromFile("D:\\visual studio\\gameimage\\flying_helicopter.gif");
-            health = 100;
         }
 
         public BulletBL Fire()
@@ -50,7 +50,6 @@ namespace AirStrike1.BL
                     break;
             }
 
-            // Final boundary check
             newLocation.X = Clamp(newLocation.X, -50, MaxX - objectWidth);
             newLocation.Y = Clamp(newLocation.Y, -20, MaxY - objectHeight);
 
@@ -62,17 +61,14 @@ namespace AirStrike1.BL
             return Math.Max(min, Math.Min(max, value));
         }
 
-        public void IncreaseScore(int points)
-        {
-            //Score += points;
-        }
-
         public void TakeDamage(int damage)
         {
-            health -= damage;
-            if (health <= 0)
+            Health -= damage;
+            if (Health <= 0)
             {
+                Health = 0;
                 GetPictureBox().Visible = false;
+                MessageBox.Show("GameOver!!!");
             }
         }
     }

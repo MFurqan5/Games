@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\BossEnemy.cs" />
     <Compile Include="BL\BulletBL.cs" />
     <Compile Include="BL\Enemy.cs" />
     <Compile Include="BL\GameObjectBL.cs" />
